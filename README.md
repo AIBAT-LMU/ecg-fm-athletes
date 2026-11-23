@@ -1,5 +1,7 @@
 # ECG foundation models for cardiovascular screening in athletes
 
+[![DOI](https://zenodo.org/badge/1385397096.svg)](https://doi.org/10.5281/zenodo.24478226)
+
 Code for the paper
 
 > Goelz C, Lang S, Schlichtiger J, Brunner S, Vieluf S. **ECG foundation models for cardiovascular
