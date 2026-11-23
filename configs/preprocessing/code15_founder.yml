@@ -1,0 +1,26 @@
+# config for the CODE-15 ECGFounder preprocessing pipeline
+
+io:
+  raw_root: "data/external/code15"
+  processed_root: "data/processed/code15_founder" 
+  source: "code15"
+
+pipeline_params:
+  desired_sample_rate: 500                    
+  leads: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+  segment_len_s: 10                           
+  filter_strategy: "founder"                 
+  standardization: "z_score"                 
+  constant_lead_strategy: "zero"
+  handle_remainder: "drop"
+  filter_cols: ["nan_any", "constant_leads_any"]
+
+splitting:
+  strategy: "stratified"
+  fractions: [0.0, 0.0, 1.0]
+  params:
+    random_state: 42
+
+execution:
+  no_parallel: false
+  nb_workers: 8

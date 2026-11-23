@@ -1,0 +1,148 @@
+# --- Data, models, runs, logs --- 
+/data/
+/models/
+/mlruns/
+/runs/
+/logs/
+
+# --- Analysis outputs --- 
+/results/
+/figures_final/
+/notebook_stats_outputs/
+/notebook_stats_outputs_*/
+/statistics/
+/reports/
+
+# --- Loose figures in repo root ---
+/*.png
+
+# --- Model weights & arrays ---
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.npy
+*.npz
+*.h5
+*.hdf5
+*.pkl
+*.parquet
+
+# --- Container ---
+*.sif
+
+# --- ide etc. ---
+.DS_Store
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# =====================================================================
+# Python
+# https://github.com/github/gitignore/blob/main/Python.gitignore
+# =====================================================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Logs
+*.log
+
+# Documentation builds
+docs/site/
+/site
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# PDM
+.pdm.toml
+.pdm-python
+.pdm-build/
+
+# PEP 582
+__pypackages__/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Type checkers / linters
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+
+# Cython debug symbols
+cython_debug/
+
+# PyPI configuration file
+.pypirc
+# Per-participant demographics - never commit
+notebooks/demographics_*.csv
+notebooks/demo_raw_per_dataset.json
+/reference/
+
+# Symlinks to external storage
+/data
+/models

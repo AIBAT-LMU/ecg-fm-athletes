@@ -1,0 +1,26 @@
+# config for the ECGFounder fine-tuning
+
+model:
+  model_type: "ecgfounder"
+  model_store: "models/"
+
+data:
+  split_file: "data/processed/physionet2021_founder/splits.csv"
+  base_path: "."
+  batch_size: 128            
+  num_labels: 26 
+
+training:
+  epochs: 100 
+  lr: 0.0001    
+  weight_decay: 0.00001              
+  clip_norm: 1.0
+  patience: 10               
+  checkpoint_path: "runs/finetune_ecgfounder_prod/checkpoints" # #checkpoints will also be in mlflow path
+
+early_stopping:
+  early_stopping_metric: "auroc"
+  early_stopping_mode: "max"
+
+logging:
+  log_every: 100

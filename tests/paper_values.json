@@ -1,0 +1,445 @@
+{
+ "_comment": "Values as published in npj Digital Medicine (2026), doi:10.1038/s41746-026-03474-9. Tolerances are half a unit of the last reported digit unless noted.",
+ "checks": [
+  {
+   "name": "Table 1 - datasets",
+   "file": "table1_datasets.csv",
+   "tolerance": 0.05,
+   "column_tolerances": {
+    "Samples": 0,
+    "Sex unknown (%)": 0.005
+   },
+   "rows": [
+    {
+     "key": {
+      "Dataset": "PhysioNet/CinC 2021"
+     },
+     "values": {
+      "Samples": 87662,
+      "Age mean": 59.4,
+      "Age SD": 18.1,
+      "Male (%)": 54.7,
+      "Female (%)": 45.3,
+      "Sex unknown (%)": 0.03
+     }
+    },
+    {
+     "key": {
+      "Dataset": "LMU"
+     },
+     "values": {
+      "Samples": 43,
+      "Age mean": 20.3,
+      "Age SD": 4.5,
+      "Male (%)": 100.0,
+      "Female (%)": 0.0,
+      "Sex unknown (%)": 0.0
+     }
+    },
+    {
+     "key": {
+      "Dataset": "CODE-15%"
+     },
+     "values": {
+      "Samples": 20000,
+      "Age mean": 52.8,
+      "Age SD": 19.8,
+      "Male (%)": 39.6,
+      "Female (%)": 60.4,
+      "Sex unknown (%)": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "name": "Table 2 - macro metrics on PhysioNet/CinC 2021 and CODE-15%",
+   "file": "table2_macro_metrics.csv",
+   "tolerance": 0.005,
+   "rows": [
+    {
+     "key": {
+      "Model": "ECG-FM",
+      "Dataset": "PhysioNet/CinC 2021"
+     },
+     "values": {
+      "Macro-AUROC": 0.97,
+      "Macro-AUPRC": 0.57,
+      "Macro-Sensitivity": 0.89,
+      "Macro-Specificity": 0.94,
+      "Macro-F1-Score": 0.49
+     }
+    },
+    {
+     "key": {
+      "Model": "ECG-FM",
+      "Dataset": "CODE-15%"
+     },
+     "values": {
+      "Macro-AUROC": 0.97,
+      "Macro-AUPRC": 0.49,
+      "Macro-Sensitivity": 0.82,
+      "Macro-Specificity": 0.95,
+      "Macro-F1-Score": 0.44
+     }
+    },
+    {
+     "key": {
+      "Model": "HuBERT-ECG (small)",
+      "Dataset": "PhysioNet/CinC 2021"
+     },
+     "values": {
+      "Macro-AUROC": 0.94,
+      "Macro-AUPRC": 0.48,
+      "Macro-Sensitivity": 0.81,
+      "Macro-Specificity": 0.93,
+      "Macro-F1-Score": 0.42
+     }
+    },
+    {
+     "key": {
+      "Model": "HuBERT-ECG (small)",
+      "Dataset": "CODE-15%"
+     },
+     "values": {
+      "Macro-AUROC": 0.97,
+      "Macro-AUPRC": 0.49,
+      "Macro-Sensitivity": 0.87,
+      "Macro-Specificity": 0.94,
+      "Macro-F1-Score": 0.41
+     }
+    },
+    {
+     "key": {
+      "Model": "ECGFounder",
+      "Dataset": "PhysioNet/CinC 2021"
+     },
+     "values": {
+      "Macro-AUROC": 0.97,
+      "Macro-AUPRC": 0.52,
+      "Macro-Sensitivity": 0.86,
+      "Macro-Specificity": 0.91,
+      "Macro-F1-Score": 0.43
+     }
+    },
+    {
+     "key": {
+      "Model": "ECGFounder",
+      "Dataset": "CODE-15%"
+     },
+     "values": {
+      "Macro-AUROC": 0.98,
+      "Macro-AUPRC": 0.59,
+      "Macro-Sensitivity": 0.94,
+      "Macro-Specificity": 0.94,
+      "Macro-F1-Score": 0.47
+     }
+    }
+   ]
+  },
+  {
+   "name": "Table 3 - macro metrics on LMU with label-level bootstrap CIs",
+   "file": "validity_summary_extended.csv",
+   "tolerance": 0,
+   "rows": [
+    {
+     "key": {
+      "Model": "ecgfm"
+     },
+     "values": {
+      "Macro-AUROC": "0.80 (0.71–0.88)",
+      "Macro-AUPRC": "0.66 (0.48–0.82)",
+      "Macro-Recall": "0.36 (0.14–0.59)",
+      "Macro-Specificity": "0.94 (0.88–0.98)",
+      "Macro-F1-Score": "0.30 (0.11–0.49)",
+      "Above Baseline (AUROC > 0.5)?": true,
+      "Above Baseline (AUPRC > Prev.)?": true,
+      "Above Baseline (Recall > 0.5)?": false,
+      "Above Baseline (Spec. > 0.5)?": true,
+      "Above Baseline (F1 > 0.5)?": false
+     }
+    },
+    {
+     "key": {
+      "Model": "founder"
+     },
+     "values": {
+      "Macro-AUROC": "0.84 (0.74–0.92)",
+      "Macro-AUPRC": "0.72 (0.55–0.86)",
+      "Macro-Recall": "0.57 (0.33–0.81)",
+      "Macro-Specificity": "0.94 (0.89–0.97)",
+      "Macro-F1-Score": "0.51 (0.28–0.74)",
+      "Above Baseline (AUROC > 0.5)?": true,
+      "Above Baseline (AUPRC > Prev.)?": true,
+      "Above Baseline (Recall > 0.5)?": false,
+      "Above Baseline (Spec. > 0.5)?": true,
+      "Above Baseline (F1 > 0.5)?": false
+     }
+    },
+    {
+     "key": {
+      "Model": "hubert"
+     },
+     "values": {
+      "Macro-AUROC": "0.73 (0.61–0.84)",
+      "Macro-AUPRC": "0.57 (0.39–0.74)",
+      "Macro-Recall": "0.46 (0.23–0.71)",
+      "Macro-Specificity": "0.93 (0.87–0.98)",
+      "Macro-F1-Score": "0.41 (0.18–0.63)",
+      "Above Baseline (AUROC > 0.5)?": true,
+      "Above Baseline (AUPRC > Prev.)?": true,
+      "Above Baseline (Recall > 0.5)?": false,
+      "Above Baseline (Spec. > 0.5)?": true,
+      "Above Baseline (F1 > 0.5)?": false
+     }
+    }
+   ]
+  },
+  {
+   "name": "Table 5 - Friedman test",
+   "file": "model_comparison_friedman_summary.csv",
+   "index_column": "metric",
+   "tolerance": 5e-05,
+   "column_tolerances": {
+    "n_labels_used": 0
+   },
+   "rows": [
+    {
+     "key": {
+      "metric": "AUROC"
+     },
+     "values": {
+      "friedman_p": 0.0075,
+      "n_labels_used": 10
+     }
+    },
+    {
+     "key": {
+      "metric": "AUPRC"
+     },
+     "values": {
+      "friedman_p": 0.0085,
+      "n_labels_used": 10
+     }
+    },
+    {
+     "key": {
+      "metric": "Recall"
+     },
+     "values": {
+      "friedman_p": 0.1835,
+      "n_labels_used": 11
+     }
+    },
+    {
+     "key": {
+      "metric": "Specificity"
+     },
+     "values": {
+      "friedman_p": 0.3212,
+      "n_labels_used": 25
+     }
+    },
+    {
+     "key": {
+      "metric": "F1-Score"
+     },
+     "values": {
+      "friedman_p": 0.2748,
+      "n_labels_used": 10
+     }
+    }
+   ]
+  },
+  {
+   "name": "Table 6 - post-hoc Wilcoxon tests (AUROC)",
+   "file": "model_comparison_posthoc_auroc.csv",
+   "tolerance": 5e-05,
+   "rows": [
+    {
+     "key": {
+      "pair": "ecgfm vs founder"
+     },
+     "values": {
+      "p_adj_fdr": 0.6406,
+      "significant_fdr": false
+     }
+    },
+    {
+     "key": {
+      "pair": "ecgfm vs hubert"
+     },
+     "values": {
+      "p_adj_fdr": 0.1963,
+      "significant_fdr": false
+     }
+    },
+    {
+     "key": {
+      "pair": "founder vs hubert"
+     },
+     "values": {
+      "p_adj_fdr": 0.0117,
+      "significant_fdr": true
+     }
+    }
+   ]
+  },
+  {
+   "name": "Table 6 - post-hoc Wilcoxon tests (AUPRC)",
+   "file": "model_comparison_posthoc_auprc.csv",
+   "tolerance": 5e-05,
+   "rows": [
+    {
+     "key": {
+      "pair": "ecgfm vs founder"
+     },
+     "values": {
+      "p_adj_fdr": 0.4961,
+      "significant_fdr": false
+     }
+    },
+    {
+     "key": {
+      "pair": "ecgfm vs hubert"
+     },
+     "values": {
+      "p_adj_fdr": 0.2402,
+      "significant_fdr": false
+     }
+    },
+    {
+     "key": {
+      "pair": "founder vs hubert"
+     },
+     "values": {
+      "p_adj_fdr": 0.0117,
+      "significant_fdr": true
+     }
+    }
+   ]
+  },
+  {
+   "name": "Table 7 - domain shift (paired permutation test)",
+   "file": "transfer_permutation_results_extended.csv",
+   "tolerance": 0.0005,
+   "column_tolerances": {
+    "_p_value": 0.002
+   },
+   "_note": "p-values are compared with a tolerance of 0.002: with freshly generated predictions, p-values of clearly non-significant comparisons can move in the third decimal.",
+   "rows": [
+    {
+     "key": {
+      "model": "ecgfm"
+     },
+     "values": {
+      "AUROC_mean_diff": 0.169,
+      "AUPRC_mean_diff": -0.085,
+      "Recall_mean_diff": 0.53,
+      "Specificity_mean_diff": 0.004,
+      "F1-Score_mean_diff": 0.189,
+      "AUROC_p_value": 0.0052,
+      "AUPRC_p_value": 0.775,
+      "Recall_p_value": 0.0032,
+      "Specificity_p_value": 0.457,
+      "F1-Score_p_value": 0.0698
+     }
+    },
+    {
+     "key": {
+      "model": "hubert"
+     },
+     "values": {
+      "AUROC_mean_diff": 0.214,
+      "AUPRC_mean_diff": -0.097,
+      "Recall_mean_diff": 0.341,
+      "Specificity_mean_diff": -0.003,
+      "F1-Score_mean_diff": 0.008,
+      "AUROC_p_value": 0.0058,
+      "AUPRC_p_value": 0.726,
+      "Recall_p_value": 0.019,
+      "Specificity_p_value": 0.54,
+      "F1-Score_p_value": 0.485
+     }
+    },
+    {
+     "key": {
+      "model": "founder"
+     },
+     "values": {
+      "AUROC_mean_diff": 0.129,
+      "AUPRC_mean_diff": -0.206,
+      "Recall_mean_diff": 0.284,
+      "Specificity_mean_diff": -0.024,
+      "F1-Score_mean_diff": -0.079,
+      "AUROC_p_value": 0.0122,
+      "AUPRC_p_value": 0.909,
+      "Recall_p_value": 0.0242,
+      "Specificity_p_value": 0.812,
+      "F1-Score_p_value": 0.704
+     }
+    }
+   ]
+  },
+  {
+   "name": "CODE-15% - number of positive exams per label",
+   "file": "code15_per_label.csv",
+   "tolerance": 0,
+   "rows": [
+    {
+     "key": {
+      "Model": "ECG-FM",
+      "Label": "AF"
+     },
+     "values": {
+      "n": 446
+     }
+    },
+    {
+     "key": {
+      "Model": "ECG-FM",
+      "Label": "CLBBB|LBBB"
+     },
+     "values": {
+      "n": 337
+     }
+    },
+    {
+     "key": {
+      "Model": "ECG-FM",
+      "Label": "CRBBB|RBBB"
+     },
+     "values": {
+      "n": 538
+     }
+    },
+    {
+     "key": {
+      "Model": "ECG-FM",
+      "Label": "IAVB"
+     },
+     "values": {
+      "n": 345
+     }
+    },
+    {
+     "key": {
+      "Model": "ECG-FM",
+      "Label": "SB"
+     },
+     "values": {
+      "n": 318
+     }
+    },
+    {
+     "key": {
+      "Model": "ECG-FM",
+      "Label": "STach"
+     },
+     "values": {
+      "n": 423
+     }
+    }
+   ]
+  }
+ ]
+}

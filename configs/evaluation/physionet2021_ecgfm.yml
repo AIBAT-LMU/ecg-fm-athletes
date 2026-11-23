@@ -1,0 +1,29 @@
+# model config
+model:
+  model_type: "ecgfm"  # can be ecgfm, ecgfounder, hubertecgbase, etc.
+  model_store: "models/" # model downloads
+
+# data config
+data:
+  split_file: "data/processed/physionet2021/splits.csv"
+  base_path: "."
+  batch_size: 256 
+  num_labels: 26   
+
+# training config
+training:
+  epochs: 100       
+  lr: 0.000001 
+  betas: [0.9, 0.98]
+  clip_norm: 1.0
+  patience: 10     
+  checkpoint_path: "models/finetuned/best_model_ecgfm.pth" # change for eval/finetuning
+
+# early stopping
+early_stopping:
+  early_stopping_metric: "auroc"
+  early_stopping_mode: "max"
+
+# logging
+logging:
+  log_every: 100   # 

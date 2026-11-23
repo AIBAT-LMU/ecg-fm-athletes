@@ -1,0 +1,24 @@
+model:
+  model_type: "hubertecgsmall"
+  model_store: "models/"
+
+data:
+  split_file: "data/processed/code15_hubert/splits.csv"
+  base_path: "."
+  batch_size: 1024 
+  num_labels: 26   
+
+training:
+  epochs: 100       
+  lr: 0.000001 
+  betas: [0.9, 0.98]
+  clip_norm: 1.0
+  patience: 10     
+  checkpoint_path: "models/finetuned/best_model_hubertecgsmall.pth"
+
+early_stopping:
+  early_stopping_metric: "auroc"
+  early_stopping_mode: "max"
+
+logging:
+  log_every: 100

@@ -1,0 +1,35 @@
+# model config
+model:
+  model_type: "hubertecgsmall"  # can be ecgfm, ecgfounder, hubertecgbase, etc.
+  model_store: "models/" # model downloads
+  transformer_blocks_to_unfreeze: 8  # all 12 transformer blocks will be trained
+  unfreeze_conv_embedder: false       # CNN stays frozen
+  model_dropout_mult: 0.0 # "zeroing the dropout probability?"
+  layerdrop: 0.1
+
+# data config
+data:
+  split_file: "data/processed/physionet2021_hubert/splits.csv"
+  base_path: "."
+  batch_size: 64 
+  num_labels: 26   
+
+# training config
+training:
+  epochs: 100       
+  lr: 0.00001
+  weight_decay_mult: 1.0
+  betas: [0.9, 0.98]
+  ramp_up_perc: 0.08
+  clip_norm: 1.0
+  patience: 10     # for early stopping
+  checkpoint_path: "models/finetuned/best_model_hubertecgsmall.pth" #change for eval/finetuning
+
+# early stopping
+early_stopping:
+  early_stopping_metric: "auroc"
+  early_stopping_mode: "max"
+
+# logging
+logging:
+  log_every: 100   # 

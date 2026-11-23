@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use this software or the published checkpoints, please cite the article below."
+title: "ecg-fm-athletes: ECG foundation models for cardiovascular screening in athletes"
+type: software
+authors:
+  - family-names: Goelz
+    given-names: Christian
+  - family-names: Lang
+    given-names: Simon
+  - family-names: Schlichtiger
+    given-names: Jenny
+  - family-names: Brunner
+    given-names: Stefan
+  - family-names: Vieluf
+    given-names: Solveig
+repository-code: "https://github.com/AIBAT-LMU/ecg-fm-athletes"
+license: MIT
+version: 1.0.0
+preferred-citation:
+  type: article
+  title: "ECG foundation models for cardiovascular screening in a cohort of young competitive athletes"
+  authors:
+    - family-names: Goelz
+      given-names: Christian
+    - family-names: Lang
+      given-names: Simon
+    - family-names: Schlichtiger
+      given-names: Jenny
+    - family-names: Brunner
+      given-names: Stefan
+    - family-names: Vieluf
+      given-names: Solveig
+  journal: "npj Digital Medicine"
+  volume: 9
+  start: 920
+  year: 2026
+  doi: "10.1038/s41746-026-03474-9"
