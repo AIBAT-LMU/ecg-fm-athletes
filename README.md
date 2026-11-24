@@ -1,6 +1,6 @@
 # ECG foundation models for cardiovascular screening in athletes
 
-[![DOI](https://zenodo.org/badge/1385397096.svg)](https://doi.org/10.5281/zenodo.24478226)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.24478226-blue)](https://doi.org/10.5281/zenodo.24478226)
 
 Code for the paper
 
